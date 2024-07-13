@@ -2,14 +2,35 @@ package main
 
 import "fmt"
 
-func main() {
-	fmt.Println("Hello, World!")
-
-	for i := 0; i < 10; i++ {
-		fmt.Printf("Jsem super preesne tolikrat: %v\n", i+1)
-
-		fmt.Println("Hello, World!")
-
+/*
+	func Funkce(x int, y int) int {
+		return x / y
 	}
+*/
+
+func Vypinac(x, y *bool) {
+	if *x == true {
+		*x = false
+	} else {
+		*x = true
+	}
+
+	if *y == true {
+		*y = false
+	} else {
+
+		*y = true
+	}
+
+}
+
+func main() {
+
+	var x bool = false
+	var y bool = false
+
+	Vypinac(&x, &y)
+
+	fmt.Println(x, y)
 
 }
